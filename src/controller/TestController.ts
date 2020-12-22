@@ -1,12 +1,12 @@
 /*
  * @Description: 业务层
- * @Description: 接收处理路由参数
- * @Author: richen
+ * @Usage: 接收处理路由参数
+ * @Author: xxx
  * @Date: 2020-12-22 15:31:17
- * @LastEditTime: 2020-12-22 16:49:33
+ * @LastEditTime: 2020-12-22 17:19:48
  */
 
-import { Controller, BaseController, Autowired, GetMapping, Post, PostMapping, Validated } from 'koatty';
+import { Controller, BaseController, Autowired, GetMapping, Post, PostMapping, Validated, KoattyContext } from 'koatty';
 import { App } from '../App';
 import { UserDTO } from '../dto/UserDTO';
 import { TestService } from '../service/TestService';
@@ -14,6 +14,7 @@ import { TestService } from '../service/TestService';
 @Controller('/')
 export class TestController extends BaseController {
   app: App;
+  ctx: KoattyContext;
 
   @Autowired()
   protected TestService: TestService;

@@ -1,12 +1,11 @@
 /*
- * @Description  : tkoatty-view中间件
- * @usage        : 封装使用tkoatty-view中间件
- * @Date         : 2020-05-12 00:08:19
- * @Author       : xxx<xxx@tencent.com>
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2020-12-22 15:55:25
- * @FilePath     : /tkoatty-template-default/src/middleware/ViewMiddleware.ts
+ * @Description: view中间件
+ * @Usage: 
+ * @Author: xxx
+ * @Date: 2020-12-22 15:54:39
+ * @LastEditTime: 2020-12-22 17:09:51
  */
+
 
 import { Middleware, IMiddleware } from 'koatty';
 import { App } from '../App';

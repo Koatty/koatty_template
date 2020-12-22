@@ -1,9 +1,9 @@
 /*
  * @Description: 逻辑层
  * @Usage: 处理具体业务逻辑
- * @Author: richen
+ * @Author: xxx
  * @Date: 2020-12-22 15:59:51
- * @LastEditTime: 2020-12-22 16:45:48
+ * @LastEditTime: 2020-12-22 17:10:14
  */
 
 import { Service, BaseService, Autowired } from 'koatty';

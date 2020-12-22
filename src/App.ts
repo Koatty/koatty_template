@@ -1,10 +1,9 @@
 /*
+ * @Description: 入口文件
+ * @Usage: 实例化app，创建服务
  * @Author: richen
  * @Date: 2020-12-22 15:35:07
- * @LastEditors: linyyyang<linyyyang@tencent.com>
- * @LastEditTime: 2020-12-22 15:36:46
- * @License: BSD (3-Clause)
- * @Copyright (c) - <richenlin(at)gmail.com>
+ * @LastEditTime: 2020-12-22 17:10:47
  */
 
 import { Koatty, Bootstrap } from "koatty";

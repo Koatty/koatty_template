@@ -1,7 +1,7 @@
 /*
  * @Description: 插件配置
  * @usage: 配置待加载的插件及加载顺序
- * @Author: richen
+ * @Author: xxx
  * @Date: 2020-12-22 15:24:25
  * @LastEditTime: 2020-12-22 15:53:00
  */

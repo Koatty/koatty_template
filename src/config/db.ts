@@ -1,7 +1,7 @@
 /*
  * @Description: db配置
  * @Usage: 包括database、redis配置信息
- * @Author: richen
+ * @Author: xxx
  * @Date: 2020-12-22 15:24:25
  * @LastEditTime: 2020-12-22 15:49:47
  */

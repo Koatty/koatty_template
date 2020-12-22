@@ -1,9 +1,9 @@
 /*
  * @Description: 配置数据
  * @Usage: 静态配置数据信息
- * @Author: richen
+ * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2020-12-22 15:52:10
+ * @LastEditTime: 2020-12-22 17:08:53
  */
 export default {
     /*app config*/

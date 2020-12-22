@@ -1,7 +1,7 @@
 /*
  * @Description: 路由配置
  * @Usage: 项目统一使用koa-router，这里配置路由属性
- * @Author: richen
+ * @Author: xxx
  * @Date: 2020-12-22 15:24:25
  * @LastEditTime: 2020-12-22 15:53:22
  */
