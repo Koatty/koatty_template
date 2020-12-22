@@ -1,0 +1,36 @@
+{
+  "name": "koatty_app",
+  "version": "1.0.0",
+  "description": "application created by koatty",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "del-cli --force dist && tsc",
+    "dev": "supervisor -w src -x ts-node -q ./src/App.ts",
+    "doc": "apidoc -i src/controller/ -o static/doc/",
+    "start": "npm run build && node ./dist/App.js",
+    "test": "tslint 'src/**/*.ts'"
+  },
+  "author": "",
+  "license": "BSD (3-Clause)",
+  "dependencies": {
+    "koatty": "^3.x.x",
+    "think_jwt": "^2.0.1",
+    "think_view": "^2.2.6",
+    "thinkorm": "^4.4.20"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.x.x",
+    "@types/koa__router": "^8.x.x",
+    "@types/node": "^12.x.x",
+    "apidoc": "^0.25.0",
+    "apidoc-plugin-class-validator": "^0.0.3",
+    "del-cli": "^3.0.1",
+    "eslint": "^7.16.0",
+    "reflect-metadata": "^0.1.13",
+    "supervisor": "^0.12.0",
+    "ts-node": "^9.1.1",
+    "tslint": "^6.1.3",
+    "tslint-config-alloy": "^0.2.1",
+    "typescript": "^4.1.3"
+  }
+}
