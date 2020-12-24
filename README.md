@@ -53,24 +53,6 @@ npm install
 # 启动服务
 npm start
 ```
-
-## API 文档
-
-使用 [apidoc](https://www.npmjs.com/package/apidoc) 模块自动生成接口文档.
-```
-npm run doc
-```
-接口文档地址：http://localhost:3000/doc/index.html
-
-
-## pm2 部署
-
-use pm2 to deploy app on production envrioment.
-
-```
-pm2 startOrGracefulReload pm2.json
-```
-
 ## 调试
 
 if you use vscode , edit the `.vscode/launch.json` , like this: 
@@ -99,3 +81,21 @@ if you use vscode , edit the `.vscode/launch.json` , like this:
 }
 ```
 Select `TS Program` to debug run. Try to call `http://localhost:3000/` .
+
+## API 文档
+
+使用 [apidoc](https://www.npmjs.com/package/apidoc) 模块自动生成接口文档.
+```
+npm run doc
+```
+接口文档地址：http://localhost:3000/doc/index.html
+
+
+## pm2 部署
+
+use pm2 to deploy app on production envrioment.
+
+```
+pm2 startOrGracefulReload pm2.json
+```
+
