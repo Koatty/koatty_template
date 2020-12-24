@@ -13,12 +13,13 @@
   "author": "",
   "license": "BSD (3-Clause)",
   "dependencies": {
-    "koatty": "^3.x.x",
+    "koatty": "^3.1.0",
     "think_jwt": "^2.0.1",
     "think_view": "^2.2.6",
     "thinkorm": "^4.4.20"
   },
   "devDependencies": {
+    "@types/cls-hooked": "^4.x.x",
     "@types/koa": "^2.x.x",
     "@types/koa__router": "^8.x.x",
     "@types/node": "^12.x.x",
