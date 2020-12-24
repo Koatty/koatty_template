@@ -3,7 +3,7 @@
  * @Usage: 处理具体业务逻辑
  * @Author: xxx
  * @Date: 2020-12-22 15:59:51
- * @LastEditTime: 2020-12-22 17:10:14
+ * @LastEditTime: 2020-12-24 10:11:26
  */
 
 import { Service, BaseService, Autowired } from 'koatty';
@@ -16,16 +16,6 @@ export class TestService extends BaseService {
   app: App;
   @Autowired()
   protected testModel: TestModel;
-
-  /**
-   * 获取用户昵称
-   *
-   * @returns {string}  返回用户昵称
-   * @memberof TestService
-   */
-  getUserName(): string {
-    return 'Koatty';
-  }
 
   /**
    * 登录检测
