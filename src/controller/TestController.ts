@@ -3,11 +3,12 @@
  * @Usage: 接收处理路由参数
  * @Author: xxx
  * @Date: 2020-12-22 15:31:17
- * @LastEditTime: 2020-12-22 17:19:48
+ * @LastEditTime: 2020-12-29 15:51:31
  */
 
-import { Controller, BaseController, Autowired, GetMapping, Post, PostMapping, Validated, KoattyContext } from 'koatty';
+import { Controller, BaseController, Autowired, GetMapping, Post, PostMapping, Validated, KoattyContext, Before } from 'koatty';
 import { App } from '../App';
+import { TestAspect } from '../aspect/TestAspect';
 import { UserDTO } from '../dto/UserDTO';
 import { TestService } from '../service/TestService';
 
@@ -71,6 +72,7 @@ export class TestController extends BaseController {
    */
   @PostMapping('/add')
   @Validated()
+  @Before(TestAspect)
   add(@Post() data: UserDTO): Promise<any> {
     const userId = this.TestService.addUser(data);
     return this.ok('success', { userId });
