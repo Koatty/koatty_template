@@ -3,10 +3,11 @@
  * @Usage: 接收处理路由参数
  * @Author: xxx
  * @Date: 2020-12-22 15:31:17
- * @LastEditTime: 2020-12-29 15:51:31
+ * @LastEditTime: 2021-02-23 19:55:57
  */
 
-import { Controller, BaseController, Autowired, GetMapping, Post, PostMapping, Validated, KoattyContext, Before } from 'koatty';
+import { Controller, BaseController, Autowired, GetMapping, Post, PostMapping, KoattyContext, Before } from 'koatty';
+import { Valid, Validated } from "koatty_validation";
 import { App } from '../App';
 import { TestAspect } from '../aspect/TestAspect';
 import { UserDTO } from '../dto/UserDTO';

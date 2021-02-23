@@ -3,9 +3,10 @@
  * @Usage: 新增用户数据处理
  * @Author: xxx
  * @Date: 2020-12-22 16:10:51
- * @LastEditTime: 2020-12-22 16:30:57
+ * @LastEditTime: 2021-02-23 19:56:28
  */
-import { Component, IsNotEmpty } from "koatty";
+import { Component } from "koatty";
+import { IsNotEmpty } from "koatty_validation";
 
 @Component()
 export class UserDTO {
