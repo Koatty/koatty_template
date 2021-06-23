@@ -5,10 +5,12 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "del-cli --force dist && tsc",
+    "eslint": "eslint --ext .ts,.js ./",
     "dev": "nodemon ./src/App.ts",
     "doc": "apidoc -i src/controller/ -o static/doc/",
     "start": "npm run build && node ./dist/App.js",
-    "test": "tslint 'src/**/*.ts'"
+    "test": "npm run eslint && jest --passWithNoTests",
+    "test:cov": "jest --collectCoverage --detectOpenHandles"
   },
   "nodemonConfig": {
     "ignore": [
@@ -39,7 +41,6 @@
     "@types/node": "^12.x.x",
     "@typescript-eslint/eslint-plugin": "^4.x.x",
     "@typescript-eslint/parser": "^4.x.x",
-    "conventional-changelog-cli": "^2.x.x",
     "del-cli": "^3.x.x",
     "eslint": "^7.x.x",
     "eslint-plugin-jest": "^24.x.x",
@@ -58,5 +59,10 @@
     "think_jwt": "^2.0.1",
     "think_view": "^2.2.7",
     "tslib": "^2.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }
