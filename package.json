@@ -55,7 +55,7 @@
     "typescript": "^4.3.4"
   },
   "dependencies": {
-    "koatty": "^3.2.10",
+    "koatty": "^3.2.11",
     "think_jwt": "^2.0.1",
     "think_view": "^2.2.7",
     "tslib": "^2.3.0"
