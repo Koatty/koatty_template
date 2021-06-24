@@ -49,6 +49,7 @@
     "jest-html-reporters": "^2.x.x",
     "koatty_cacheable": "^1.x.x",
     "koatty_schedule": "^1.x.x",
+    "nodemon": "^2.x.x",
     "standard-version": "^9.x.x",
     "ts-jest": "^27.x.x",
     "ts-node": "^10.0.0",
