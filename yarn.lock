@@ -4691,10 +4691,10 @@
     "reflect-metadata" "^0.1.13"
     "tslib" "^2.3.0"
 
-"koatty@^3.3.0":
-  "integrity" "sha512-GZWEaMMeqkoIko3wAMPlT7nffu4EuG72WItqLDl9Nuz8DoHoREl93K1WA9SX2RUQO//K2Me3xtkfIF8QCa0afQ=="
-  "resolved" "https://registry.npmjs.org/koatty/-/koatty-3.3.0.tgz"
-  "version" "3.3.0"
+"koatty@^3.3.2":
+  "integrity" "sha512-keXlqQy+61k2bpbSrcqWSmR2EtzwtdDmQRToEOS8hwJS6RfYc514pRnuZELGuLSShDUDN/kQnHwB49vxVQgfhg=="
+  "resolved" "https://registry.npmjs.org/koatty/-/koatty-3.3.2.tgz"
+  "version" "3.3.2"
   dependencies:
     "globby" "^11.0.4"
     "koa" "^2.13.1"
@@ -4704,9 +4704,7 @@
     "koatty_payload" "^1.2.5"
     "koatty_router" "^1.0.5"
     "koatty_serve" "^1.0.3"
-    "koatty_static" "^1.2.5"
     "koatty_trace" "^1.2.5"
-    "koatty_validation" "^1.0.2"
     "reflect-metadata" "^0.1.13"
     "tslib" "^2.3.0"
 
