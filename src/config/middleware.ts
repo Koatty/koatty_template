@@ -3,7 +3,7 @@
  * @usage: 配置待加载的中间件及加载顺序, 中间件在middleware目录下引入
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2020-12-22 17:09:01
+ * @LastEditTime: 2021-07-01 15:39:16
  */
 
 export default {
@@ -15,12 +15,6 @@ export default {
         // StaticMiddleware: {
         //     cache: true
         // },
-        JwtMiddleware: {
-            alg: 'HS256', // 算法
-            sub: 'jwt', // 主题
-            exp: 86400, // 过期时间, now() + 86400
-            key: 'TKoatty',
-        },
         ViewMiddleware: {
             view_path: `${process.env.ROOT_PATH}/view`, // 模板目录
             engine_type: 'ejs', // 模版引擎名称 ejs, pug

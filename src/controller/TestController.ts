@@ -3,7 +3,7 @@
  * @Usage: 接收处理路由参数
  * @Author: xxx
  * @Date: 2020-12-22 15:31:17
- * @LastEditTime: 2021-02-23 19:55:57
+ * @LastEditTime: 2021-07-01 15:49:09
  */
 
 import { Controller, BaseController, Autowired, GetMapping, Post, PostMapping, KoattyContext, Before } from 'koatty';
@@ -42,8 +42,6 @@ export class TestController extends BaseController {
    * @api {get} / index接口
    * @apiGroup Test
    * 
-   * @apiHeader {String} x-access-token JWT token
-   * 
    * 
    * @apiSuccessExample {json} Success
    * {"code":1,"message":"","data":{}}
@@ -58,10 +56,26 @@ export class TestController extends BaseController {
   }
 
   /**
-   * @api {post} /add add接口
+   * @api {get} /get get接口
    * @apiGroup Test
    * 
-   * @apiHeader {String} x-access-token JWT token
+   * @apiParam {number} id  userId.
+   * 
+   * @apiSuccessExample {json} Success
+   * {"code":1,"message":"","data":{}}
+   * 
+   * @apiErrorExample {json} Error
+   * {"code":0,"message":"错误信息","data":null}
+   */
+  @GetMapping("/get")
+  async get(@Valid("IsNotEmpty", "id不能为空") id: number): Promise<any> {
+    const userInfo = await this.TestService.getUser(id);
+    return this.ok("success", userInfo);
+  }
+
+  /**
+   * @api {post} /add add接口
+   * @apiGroup Test
    * 
    * @apiParamClass (src/dto/UserDTO.ts) {RoleDTO}
    * 
@@ -74,8 +88,8 @@ export class TestController extends BaseController {
   @PostMapping('/add')
   @Validated()
   @Before(TestAspect)
-  add(@Post() data: UserDTO): Promise<any> {
-    const userId = this.TestService.addUser(data);
+  async add(@Post() data: UserDTO): Promise<any> {
+    const userId = await this.TestService.addUser(data);
     return this.ok('success', { userId });
   }
 

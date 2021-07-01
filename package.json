@@ -47,8 +47,6 @@
     "husky": "^6.x.x",
     "jest": "^27.x.x",
     "jest-html-reporters": "^2.x.x",
-    "koatty_cacheable": "^1.x.x",
-    "koatty_schedule": "^1.x.x",
     "nodemon": "^2.x.x",
     "standard-version": "^9.x.x",
     "ts-jest": "^27.x.x",
@@ -57,7 +55,10 @@
   },
   "dependencies": {
     "koatty": "^3.3.0",
-    "think_jwt": "^2.0.1",
+    "koatty_cacheable": "^1.2.10",
+    "koatty_schedule": "^1.4.4",
+    "koatty_static": "^1.2.5",
+    "koatty_validation": "^1.0.2",
     "think_view": "^2.2.7",
     "tslib": "^2.3.0"
   },
