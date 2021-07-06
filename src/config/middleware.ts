@@ -3,11 +3,11 @@
  * @usage: 配置待加载的中间件及加载顺序, 中间件在middleware目录下引入
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2021-07-01 15:39:16
+ * @LastEditTime: 2021-07-06 16:49:57
  */
 
 export default {
-    list: ["JwtMiddleware", "ViewMiddleware"], //加载的中间件列表
+    list: ["StaticMiddleware", "JwtMiddleware", "ViewMiddleware"], //加载的中间件列表
     config: { //中间件配置
         // 静态服务器中间件默认未开启
         StaticMiddleware: false,
