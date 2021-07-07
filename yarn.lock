@@ -4558,10 +4558,10 @@
     "type-is" "^1.6.16"
     "vary" "^1.1.2"
 
-"koatty_cacheable@^1.2.10":
-  "integrity" "sha512-p6gK5/bZXl8TkoZ25lHeGFjPYN8nnWFiYzjBAw9LAQp7V0lY6E3kLhrIa0Inmg0ptmC5UTXmHTa9nZgA7o3KCg=="
-  "resolved" "https://registry.npmjs.org/koatty_cacheable/-/koatty_cacheable-1.2.10.tgz"
-  "version" "1.2.10"
+"koatty_cacheable@^1.2.11":
+  "integrity" "sha512-kxC09cTzscqKTHIX/x7X0LPhNSsJt5IRTOF3ufLmEt7kVIbYG1tfhjbPY0uept1D4KurrcYMl3uZdMJnib0vGQ=="
+  "resolved" "https://registry.npmjs.org/koatty_cacheable/-/koatty_cacheable-1.2.11.tgz"
+  "version" "1.2.11"
   dependencies:
     "koatty_container" "^1.x.x"
     "koatty_lib" "^1.x.x"
@@ -4580,10 +4580,10 @@
     "reflect-metadata" "^0.1.13"
     "tslib" "^2.3.0"
 
-"koatty_lib@^1.2.5", "koatty_lib@^1.x.x":
-  "integrity" "sha512-+QGUUp6ole9q9ClnVUejepISQMMMnmPdu/p1IHo4y9Ex3TLg5tFJUwGEE3wtngQYuz+begmwUXGk6bVgxUiS6w=="
-  "resolved" "https://registry.npmjs.org/koatty_lib/-/koatty_lib-1.2.5.tgz"
-  "version" "1.2.5"
+"koatty_lib@^1.2.6", "koatty_lib@^1.x.x":
+  "integrity" "sha512-aciq/4qMpVN3quBMbUszD1wKnjOTeFgAQ9hVcZOvHYvK75ZFPSUKhXI0k2Eb7jpz7RO3myr9RzkC2W8URdEHiQ=="
+  "resolved" "https://registry.npmjs.org/koatty_lib/-/koatty_lib-1.2.6.tgz"
+  "version" "1.2.6"
   dependencies:
     "@types/lodash" "^4.x.x"
     "co" "^4.6.0"
@@ -4613,10 +4613,10 @@
     "raw-body" "^2.4.1"
     "xml2js" "^0.4.23"
 
-"koatty_router@^1.0.5":
-  "integrity" "sha512-t99Z6W9LxoHBy1Lz8FxJz5QynLI0Jt6WI77sTSp7PLbeE+cxNpUn2Ke4cbcBRF/tLwP4kO/wxZvJuUyX8GZZrA=="
-  "resolved" "https://registry.npmjs.org/koatty_router/-/koatty_router-1.0.5.tgz"
-  "version" "1.0.5"
+"koatty_router@^1.0.6":
+  "integrity" "sha512-5vOjUIXbIPT6CN8NfIRZj61g8X9aEispVj9BI0DCm+k1F+ouG8/mA1LQ8ZYlfg+Pgx/pdzPESSoNRQqFhAPNLQ=="
+  "resolved" "https://registry.npmjs.org/koatty_router/-/koatty_router-1.0.6.tgz"
+  "version" "1.0.6"
   dependencies:
     "@koa/router" "^10.0.0"
     "koatty_container" "^1.x.x"
@@ -4625,10 +4625,10 @@
     "koatty_validation" "^1.x.x"
     "tslib" "^2.3.0"
 
-"koatty_schedule@^1.4.4":
-  "integrity" "sha512-8hCnLTe4tTTcLKfjOe+YH4316nFlgwQUBGpqZjWjhFEGhl8FUvoDArEqEDQDLztWtpsQlHgD0551xG32wuqyGg=="
-  "resolved" "https://registry.npmjs.org/koatty_schedule/-/koatty_schedule-1.4.4.tgz"
-  "version" "1.4.4"
+"koatty_schedule@^1.4.5":
+  "integrity" "sha512-hJatFy9RJ+/9dH8t8Y0R+1uhW85NnQj4OvvO44ezZmFYBq7lbeIfNj2MP0r46RDf1dBjWRHNHZ9+57ZuPramMg=="
+  "resolved" "https://registry.npmjs.org/koatty_schedule/-/koatty_schedule-1.4.5.tgz"
+  "version" "1.4.5"
   dependencies:
     "cron" "^1.8.2"
     "koatty_container" "^1.x.x"
@@ -4638,10 +4638,10 @@
     "reflect-metadata" "^0.1.13"
     "tslib" "^2.3.0"
 
-"koatty_serve@^1.0.3":
-  "integrity" "sha512-jRkUCtLnJb6WS5XeHXkLW4y9qZ/LCt+klQYJ0ibhjX+49BSaHP/XvwdJtSjryjo32O2t0UxtDSBWJG4ImOFxbA=="
-  "resolved" "https://registry.npmjs.org/koatty_serve/-/koatty_serve-1.0.3.tgz"
-  "version" "1.0.3"
+"koatty_serve@^1.0.4":
+  "integrity" "sha512-MEUyoIkLlqbALG22DQsriV4VKc5M7OZGoSSjSeNUTLdXgZT/uD9+6dEO3uBwVwhXcnJUTsjUIfauBjDjS/n7LQ=="
+  "resolved" "https://registry.npmjs.org/koatty_serve/-/koatty_serve-1.0.4.tgz"
+  "version" "1.0.4"
   dependencies:
     "@godaddy/terminus" "^4.9.0"
     "koatty_container" "^1.x.x"
@@ -4669,10 +4669,10 @@
     "koatty_lib" "^1.x.x"
     "koatty_logger" "^1.x.x"
 
-"koatty_trace@^1.2.5", "koatty_trace@^1.x.x":
-  "integrity" "sha512-h+/0fr0uDp2q7ml/lI8ctwxxUN94nSqnPTg94V1YwEGTnJSgBm1aQwLAnJrq9CB9lbwuLEm48rffpPqX4m8HVw=="
-  "resolved" "https://registry.npmjs.org/koatty_trace/-/koatty_trace-1.2.5.tgz"
-  "version" "1.2.5"
+"koatty_trace@^1.2.8", "koatty_trace@^1.x.x":
+  "integrity" "sha512-nD1QQL91vg3rPw9YkhStKla0xsrik902cKRdhuCrBEAeQwnN0UvjNnZZ+pz3Hb4+RalNanjzIF3t0di8VAmf9w=="
+  "resolved" "https://registry.npmjs.org/koatty_trace/-/koatty_trace-1.2.8.tgz"
+  "version" "1.2.8"
   dependencies:
     "cls-hooked" "^4.2.2"
     "koatty_container" "^1.x.x"
@@ -4691,20 +4691,20 @@
     "reflect-metadata" "^0.1.13"
     "tslib" "^2.3.0"
 
-"koatty@^3.3.2":
-  "integrity" "sha512-keXlqQy+61k2bpbSrcqWSmR2EtzwtdDmQRToEOS8hwJS6RfYc514pRnuZELGuLSShDUDN/kQnHwB49vxVQgfhg=="
-  "resolved" "https://registry.npmjs.org/koatty/-/koatty-3.3.2.tgz"
-  "version" "3.3.2"
+"koatty@^3.3.4":
+  "integrity" "sha512-KS9YwH69mMCKOIJ9LH9oxtwmuo6Fw5qAe1PIslaLHB/vE0vanOatFiuHaW3LYkuf5CmaEnqt+Xo0cYcxwxmwiA=="
+  "resolved" "https://registry.npmjs.org/koatty/-/koatty-3.3.4.tgz"
+  "version" "3.3.4"
   dependencies:
     "globby" "^11.0.4"
     "koa" "^2.13.1"
     "koatty_container" "^1.4.3"
-    "koatty_lib" "^1.2.5"
+    "koatty_lib" "^1.2.6"
     "koatty_logger" "^1.1.2"
     "koatty_payload" "^1.2.5"
-    "koatty_router" "^1.0.5"
-    "koatty_serve" "^1.0.3"
-    "koatty_trace" "^1.2.5"
+    "koatty_router" "^1.0.6"
+    "koatty_serve" "^1.0.4"
+    "koatty_trace" "^1.2.8"
     "reflect-metadata" "^0.1.13"
     "tslib" "^2.3.0"
 

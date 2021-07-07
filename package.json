@@ -54,9 +54,9 @@
     "typescript": "^4.3.4"
   },
   "dependencies": {
-    "koatty": "^3.3.3",
-    "koatty_cacheable": "^1.2.10",
-    "koatty_schedule": "^1.4.4",
+    "koatty": "^3.3.4",
+    "koatty_cacheable": "^1.2.11",
+    "koatty_schedule": "^1.4.5",
     "koatty_static": "^1.2.5",
     "koatty_validation": "^1.0.2",
     "think_view": "^2.2.7",
