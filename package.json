@@ -54,12 +54,12 @@
     "typescript": "^4.3.4"
   },
   "dependencies": {
-    "koatty": "^3.3.4",
-    "koatty_cacheable": "^1.2.11",
-    "koatty_schedule": "^1.4.5",
-    "koatty_static": "^1.2.5",
-    "koatty_validation": "^1.0.2",
-    "think_view": "^2.2.7",
+    "koatty": "^3.3.6",
+    "koatty_cacheable": "^1.2.12",
+    "koatty_schedule": "^1.4.6",
+    "koatty_static": "^1.2.6",
+    "koatty_validation": "^1.0.4",
+    "koatty_views": "^1.0.2",
     "tslib": "^2.3.0"
   },
   "husky": {

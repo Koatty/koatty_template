@@ -3,7 +3,7 @@
  * @Usage: 接收处理路由参数
  * @Author: xxx
  * @Date: 2020-12-22 15:31:17
- * @LastEditTime: 2021-07-01 15:49:09
+ * @LastEditTime: 2021-07-13 17:25:32
  */
 
 import { Controller, BaseController, Autowired, GetMapping, Post, PostMapping, KoattyContext, Before } from 'koatty';
@@ -101,7 +101,7 @@ export class TestController extends BaseController {
    */
   @GetMapping('/html')
   html(): Promise<any> {
-    this.ctx.status = 200;
-    return this.ctx.render('./index.html');
+    this.ctx.state = { title: 'Koatty', content: 'Hello, Koatty!' };
+    return this.ctx.render('index.html');
   }
 }

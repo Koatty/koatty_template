@@ -3,7 +3,7 @@
  * @usage: 配置待加载的中间件及加载顺序, 中间件在middleware目录下引入
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2021-07-06 16:49:57
+ * @LastEditTime: 2021-07-13 17:19:39
  */
 
 export default {
@@ -16,13 +16,17 @@ export default {
         //     cache: true
         // },
         ViewMiddleware: {
-            view_path: `${process.env.ROOT_PATH}/view`, // 模板目录
-            engine_type: 'ejs', // 模版引擎名称 ejs, pug
-            engine_config: { cache: true }, // 模版引擎配置
-            content_type: 'text/html', // 模版输出类型
-            file_suffix: '.html', // 模版文件名后缀
-            file_depr: '_', // controller和action之间的分隔符
-            default_theme: 'default', // 默认模板主题
+            root: `${process.env.ROOT_PATH}/view`, // 模板目录
+            opts: {
+                autoRender: false,
+                extension: 'html',
+                map: {
+                    html: "ejs",
+                },
+                options: {
+                    cache: false,
+                }
+            }
         },
     }
 };
