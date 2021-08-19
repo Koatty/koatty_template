@@ -41,6 +41,8 @@
     "@types/node": "^12.x.x",
     "@typescript-eslint/eslint-plugin": "^4.x.x",
     "@typescript-eslint/parser": "^4.x.x",
+    "apidoc": "^0.29.0",
+    "apidoc-plugin-class-validator": "^0.0.3",
     "del-cli": "^3.x.x",
     "eslint": "^7.x.x",
     "eslint-plugin-jest": "^24.x.x",
@@ -50,17 +52,17 @@
     "nodemon": "^2.x.x",
     "standard-version": "^9.x.x",
     "ts-jest": "^27.x.x",
-    "ts-node": "^10.0.0",
-    "typescript": "^4.3.4"
+    "ts-node": "^10.2.1",
+    "typescript": "^4.3.5"
   },
   "dependencies": {
-    "koatty": "^3.3.6",
+    "koatty": "^3.3.7",
     "koatty_cacheable": "^1.2.12",
     "koatty_schedule": "^1.4.6",
     "koatty_static": "^1.2.6",
     "koatty_validation": "^1.0.4",
     "koatty_views": "^1.0.2",
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.1"
   },
   "husky": {
     "hooks": {
