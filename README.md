@@ -1,10 +1,12 @@
-# Application created by [Koatty](https://github.com/koatty/koatty)
+# _PROJECT_NAME
+
+Application created by [Koatty](https://github.com/koatty/koatty)
 
 
 ## 项目目录结构
 
  ```shell
-<projectName>
+projectName
 ├── .vscode                       # vscode配置
 │   └── launch.json               # node本地调试脚本
 ├── dist                          # 编译后目录
