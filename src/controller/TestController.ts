@@ -3,10 +3,10 @@
  * @Usage: 接收处理路由参数
  * @Author: xxx
  * @Date: 2020-12-22 15:31:17
- * @LastEditTime: 2021-07-13 17:25:32
+ * @LastEditTime: 2021-11-20 23:57:10
  */
 
-import { Controller, BaseController, Autowired, GetMapping, Post, PostMapping, KoattyContext, Before } from 'koatty';
+import { Controller, Autowired, GetMapping, Post, PostMapping, KoattyContext, Before, HttpController } from 'koatty';
 import { Valid, Validated } from "koatty_validation";
 import { App } from '../App';
 import { TestAspect } from '../aspect/TestAspect';
@@ -14,7 +14,7 @@ import { UserDTO } from '../dto/UserDTO';
 import { TestService } from '../service/TestService';
 
 @Controller('/')
-export class TestController extends BaseController {
+export class TestController extends HttpController {
   app: App;
   ctx: KoattyContext;
 
