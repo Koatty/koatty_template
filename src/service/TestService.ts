@@ -3,12 +3,12 @@
  * @Usage: 处理具体业务逻辑
  * @Author: xxx
  * @Date: 2020-12-22 15:59:51
- * @LastEditTime: 2021-07-01 16:05:30
+ * @LastEditTime: 2021-11-22 17:25:07
  */
 
 import { Service, BaseService, Autowired } from 'koatty';
 import { App } from '../App';
-import { UserDTO } from '../dto/UserDTO';
+import { UserDto } from '../dto/UserDto';
 import { Scheduled, SchedulerLock } from "koatty_schedule";
 import { CacheAble, CacheEvict, GetCacheStore } from "koatty_cacheable";
 // import { TestModel } from '../model/TestModel';
@@ -44,11 +44,11 @@ export class TestService extends BaseService {
   /**
    * 新增用户
    *
-   * @param {UserDTO} data
+   * @param {UserDto} data
    * @returns {*}  {Promise<any>}
    * @memberof TestService
    */
-  addUser(data: UserDTO): Promise<any> {
+  addUser(data: UserDto): Promise<any> {
     // return this.testModel.save(data);
     return Promise.resolve();
   }
