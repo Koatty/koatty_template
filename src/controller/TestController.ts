@@ -3,14 +3,14 @@
  * @Usage: 接收处理路由参数
  * @Author: xxx
  * @Date: 2020-12-22 15:31:17
- * @LastEditTime: 2021-11-20 23:57:10
+ * @LastEditTime: 2021-11-22 17:24:10
  */
 
 import { Controller, Autowired, GetMapping, Post, PostMapping, KoattyContext, Before, HttpController } from 'koatty';
 import { Valid, Validated } from "koatty_validation";
 import { App } from '../App';
 import { TestAspect } from '../aspect/TestAspect';
-import { UserDTO } from '../dto/UserDTO';
+import { UserDto } from '../dto/UserDto';
 import { TestService } from '../service/TestService';
 
 @Controller('/')
@@ -77,7 +77,7 @@ export class TestController extends HttpController {
    * @api {post} /add add接口
    * @apiGroup Test
    * 
-   * @apiParamClass (src/dto/UserDTO.ts) {RoleDTO}
+   * @apiParamClass (src/dto/UserDto.ts) {RoleDTO}
    * 
    * @apiSuccessExample {json} Success
    * {"code":1,"message":"","data":{}}
@@ -88,7 +88,7 @@ export class TestController extends HttpController {
   @PostMapping('/add')
   @Validated()
   @Before(TestAspect)
-  async add(@Post() data: UserDTO): Promise<any> {
+  async add(@Post() data: UserDto): Promise<any> {
     const userId = await this.TestService.addUser(data);
     return this.ok('success', { userId });
   }
