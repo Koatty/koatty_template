@@ -5397,10 +5397,10 @@
     "koatty_core" "^1.x.x"
     "koatty_lib" "^1.x.x"
 
-"koatty@^3.4.6":
-  "integrity" "sha512-qbXC1R87Rlkky54IsgcxdP5Yc/mQfHPRy56kKrEnHHrgqRMzNaUbDNKqZ2yOvqiU1UYP+EXNKJ1nyBg0mGC9cw=="
-  "resolved" "https://registry.npmjs.org/koatty/-/koatty-3.4.6.tgz"
-  "version" "3.4.6"
+"koatty@^3.4.8":
+  "integrity" "sha512-YS5K9fxBdBu4zKkC7ylAKJwSpaoQPBrUD9ln+cG1ASyl31s3ZgkvuS/87jpyION+bHOMutrezHd6dbiTD4EtXA=="
+  "resolved" "https://registry.npmjs.org/koatty/-/koatty-3.4.8.tgz"
+  "version" "3.4.8"
   dependencies:
     "globby" "^11.0.4"
     "koa" "^2.13.4"
