@@ -3,7 +3,7 @@
  * @Usage: 接收处理路由参数
  * @Author: xxx
  * @Date: 2020-12-22 15:31:17
- * @LastEditTime: 2021-11-22 17:24:10
+ * @LastEditTime: 2021-11-24 14:32:20
  */
 
 import { Controller, Autowired, GetMapping, Post, PostMapping, KoattyContext, Before, HttpController } from 'koatty';
