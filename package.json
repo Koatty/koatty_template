@@ -40,6 +40,7 @@
     "@types/node": "^16.x.x",
     "@typescript-eslint/eslint-plugin": "^5.x.x",
     "@typescript-eslint/parser": "^5.x.x",
+    "apidoc": "^0.x.x",
     "conventional-changelog-cli": "^2.x.x",
     "del-cli": "^4.x.x",
     "eslint": "^8.x.x",
