@@ -12,6 +12,9 @@
     "test": "npm run eslint && jest --passWithNoTests",
     "test:cov": "jest --collectCoverage --detectOpenHandles"
   },
+  "engines": {
+    "node": ">12.0.0"
+  },
   "nodemonConfig": {
     "ignore": [
       "test/*",
