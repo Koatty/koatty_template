@@ -3,21 +3,18 @@
  * @Usage: 处理具体业务逻辑
  * @Author: xxx
  * @Date: 2020-12-22 15:59:51
- * @LastEditTime: 2021-11-24 14:32:07
+ * @LastEditTime: 2021-12-02 00:29:55
  */
 
-import { Service, BaseService, Autowired } from 'koatty';
+import { Service, BaseService, Autowired, Logger } from 'koatty';
 import { App } from '../App';
 import { UserDto } from '../dto/UserDto';
 import { Scheduled, SchedulerLock } from "koatty_schedule";
 import { CacheAble, CacheEvict, GetCacheStore } from "koatty_cacheable";
-// import { TestModel } from '../model/TestModel';
 
 @Service()
 export class TestService extends BaseService {
   app: App;
-  // @Autowired()
-  // protected testModel: TestModel;
 
   /**
    * 登录检测
@@ -49,7 +46,6 @@ export class TestService extends BaseService {
    * @memberof TestService
    */
   addUser(data: UserDto): Promise<any> {
-    // return this.testModel.save(data);
     return Promise.resolve();
   }
 
@@ -62,6 +58,6 @@ export class TestService extends BaseService {
   //计划任务加锁，默认内存锁，配合redis可以实现分布式锁
   // @SchedulerLock("testCron") 
   testCron() {
-    console.log('cron job');
+    Logger.Debug('cron job');
   }
 }

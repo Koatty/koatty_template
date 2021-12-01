@@ -3,10 +3,10 @@
  * @Usage: 接收处理路由参数
  * @Author: xxx
  * @Date: 2020-12-22 15:31:17
- * @LastEditTime: 2021-11-24 14:32:20
+ * @LastEditTime: 2021-12-02 00:31:18
  */
 
-import { Controller, Autowired, GetMapping, Post, PostMapping, KoattyContext, Before, HttpController } from 'koatty';
+import { Controller, Autowired, GetMapping, Post, PostMapping, KoattyContext, Before, HttpController, Get } from 'koatty';
 import { Valid, Validated } from "koatty_validation";
 import { App } from '../App';
 import { TestAspect } from '../aspect/TestAspect';
@@ -14,7 +14,7 @@ import { UserDto } from '../dto/UserDto';
 import { TestService } from '../service/TestService';
 
 @Controller('/')
-export class TestController extends HttpController {
+export class IndexController extends HttpController {
   app: App;
   ctx: KoattyContext;
 
@@ -49,7 +49,7 @@ export class TestController extends HttpController {
    * @apiErrorExample {json} Error
    * {"code":0,"message":"错误信息","data":null}
    */
-  @GetMapping('/')
+  @GetMapping()
   index(): Promise<any> {
     this.ctx.status = 200;
     return this.ok('Hi Koatty');
@@ -68,7 +68,7 @@ export class TestController extends HttpController {
    * {"code":0,"message":"错误信息","data":null}
    */
   @GetMapping("/get")
-  async get(@Valid("IsNotEmpty", "id不能为空") id: number): Promise<any> {
+  async get(@Valid("IsNotEmpty", "id不能为空") @Get("id") id: number): Promise<any> {
     const userInfo = await this.TestService.getUser(id);
     return this.ok("success", userInfo);
   }
