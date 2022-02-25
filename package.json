@@ -4,8 +4,9 @@
   "description": "application created by koatty",
   "main": "dist/index.js",
   "scripts": {
-    "build": "del-cli --force dist && tsc && copyfiles -u 1 ./src/**/*.json ./src/**/*.proto dist/",
-    "build:image": "npm run build && docker build -t _PROJECT_NAME:latest .",
+    "build": "npm run clear && tsc && copyfiles -u 1 ./src/**/*.json ./src/**/*.proto dist/",
+    "clear": "del-cli --force dist deploy/dist",
+    "build:image": "npm run build && copyfiles -u 1 \"dist/**/*\" deploy/dist && docker build -t koatty/_PROJECT_NAME:latest deploy/",
     "eslint": "eslint --ext .ts,.js ./",
     "dev": "nodemon ./src/App.ts",
     "doc": "apidoc -i src/controller/ -o static/doc/",

@@ -20,14 +20,13 @@ RUN apk add --no-cache bash curl ca-certificates tzdata && \
 RUN touch ~/.bashrc && curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --rc && \
 yarn --version
 
-RUN npm i -g nrm --registry=https://registry.npm.taobao.org/ && \
-	nrm use taobao && npm i -g yarn@1.22.10 pm2@2.10.4
+RUN npm i -g nrm && \
+	nrm use yarn && npm i -g pm2@2.x.x
 	
 
 # Clean 
 RUN rm -rf /var/cache/apk/* \
     && rm -rf /tmp/* 
-
 
 # Workdir
 RUN mkdir -p /data
@@ -36,7 +35,8 @@ WORKDIR /data
 # Expose port
 EXPOSE 3000
 
-# Configure
+# Copy files
+COPY dist/ .
 COPY start.sh /start.sh
 COPY pm2.json /pm2.json
 
