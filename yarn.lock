@@ -5398,15 +5398,16 @@
     "koatty_lib" "^1.x.x"
     "protobufjs" "^6.11.2"
 
-"koatty_router@1.7.1":
-  "integrity" "sha512-GA7L+H3dJltq1r7dniJb5aykGYnIAfY1yQ4XO/Si3RWgePr8X9IM5KRn1r9GJfJMWj3Zs3L8Gn78PVE935Uv5Q=="
-  "resolved" "https://registry.npmjs.org/koatty_router/-/koatty_router-1.7.1.tgz"
-  "version" "1.7.1"
+"koatty_router@1.7.2":
+  "integrity" "sha512-6qwLHmVUQpBOJgUZWpy/tzp/e53WL7nSMwhpLJG+LeNiYMoFjn6CsjbZziusoNVp5UUFegsSQDEMgXp4NWzANg=="
+  "resolved" "https://registry.npmjs.org/koatty_router/-/koatty_router-1.7.2.tgz"
+  "version" "1.7.2"
   dependencies:
     "@grpc/grpc-js" "^1.5.5"
     "@koa/router" "^10.1.1"
     "koatty_container" "^1.x.x"
     "koatty_core" "^1.x.x"
+    "koatty_exception" "^1.x.x"
     "koatty_lib" "^1.x.x"
     "koatty_logger" "^1.x.x"
     "koatty_proto" "^1.x.x"
@@ -5470,10 +5471,10 @@
     "koatty_lib" "^1.x.x"
     "uuid" "^8.3.2"
 
-"koatty_validation@^1.1.0", "koatty_validation@^1.x.x", "koatty_validation@1.1.0":
-  "integrity" "sha512-2oRlcvruPJChLrX42+MXH2FaIozvCkiBHztn1fOhigYRU9jhWRD3JvudZywEurJO7kqZedRWWKMAj6u/p0T80Q=="
-  "resolved" "https://registry.npmjs.org/koatty_validation/-/koatty_validation-1.1.0.tgz"
-  "version" "1.1.0"
+"koatty_validation@^1.x.x", "koatty_validation@1.2.2":
+  "integrity" "sha512-9qiw9SqgXTw+q8Wa1xGY8qOUmmCZEStnM7LKIikua10qhl/aFOs6BeMytQf0eH6wh+PQ3MSoaUBpBqzm7lPWFg=="
+  "resolved" "https://registry.npmjs.org/koatty_validation/-/koatty_validation-1.2.2.tgz"
+  "version" "1.2.2"
   dependencies:
     "class-validator" "^0.13.2"
     "koatty_container" "^1.x.x"
@@ -5492,10 +5493,10 @@
     "koatty_core" "^1.x.x"
     "koatty_lib" "^1.x.x"
 
-"koatty@^3.6.2":
-  "integrity" "sha512-zM4zr3l/l7NTeP5IFtyuPPAHazZXlHysQtxnfsS6RFwrEX4ccg++k44o4/p0br5ldKqoIB7EIrn0D9bxI4lbBw=="
-  "resolved" "https://registry.npmjs.org/koatty/-/koatty-3.6.2.tgz"
-  "version" "3.6.2"
+"koatty@^3.6.3":
+  "integrity" "sha512-p0XeQZTlq4nZcP7+HQZN9bVPWPtIYwDCdrjP8PB+BRtttpLqz+8h+wkBS0zzM5TV9bQLLaVle+1LjgACGLpPUg=="
+  "resolved" "https://registry.npmjs.org/koatty/-/koatty-3.6.3.tgz"
+  "version" "3.6.3"
   dependencies:
     "koa" "2.13.4"
     "koatty_config" "1.1.2"
@@ -5507,10 +5508,10 @@
     "koatty_logger" "1.3.12"
     "koatty_payload" "1.3.14"
     "koatty_proto" "1.1.6"
-    "koatty_router" "1.7.1"
+    "koatty_router" "1.7.2"
     "koatty_serve" "1.4.8"
     "koatty_trace" "1.6.1"
-    "koatty_validation" "1.1.0"
+    "koatty_validation" "1.2.2"
     "reflect-metadata" "0.1.13"
     "tslib" "2.3.1"
 
