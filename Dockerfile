@@ -36,8 +36,13 @@ WORKDIR /data
 EXPOSE 3000
 
 # Copy files
-COPY dist/ .
-COPY start.sh /start.sh
-COPY pm2.json /pm2.json
+COPY dist/ /data/dist
+COPY static/ /data/static
+COPY view/ /data/view
+COPY package.json /data/package.json
+COPY yarn.lock /data/yarn.lock
+
+COPY deploy/start.sh /start.sh
+COPY deploy/pm2.json /pm2.json
 
 CMD ["sh", "/start.sh"]

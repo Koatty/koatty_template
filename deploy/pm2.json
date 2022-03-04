@@ -4,8 +4,8 @@
   "apps": [
     {
       "name": "app",
-      "script": "index.js",
-      "cwd": "/data",
+      "script": "App.js",
+      "cwd": "/data/dist",
       "instances": 2,
       "exec_interpreter": "",
       "exec_mode": "cluster",

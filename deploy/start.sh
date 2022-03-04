@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "install nodejs modules ----------------------------------"
-yarn install
+cd /data && yarn install -s
 
 echo "start pm2 -----------------------------------------------"
 pm2 startOrGracefulReload /pm2.json
