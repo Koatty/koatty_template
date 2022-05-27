@@ -1,8 +1,6 @@
 module.exports = {
     // skip: {
-    //     bump: true, // 自增版本
-    //     commit: true, // 自动commit
-    //     tag: true, // 自动打tag
+    //     tag: true,
     // },
     //server-version自动commit的模板
     releaseCommitMessageFormat:
