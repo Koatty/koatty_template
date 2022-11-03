@@ -60,13 +60,14 @@
     "typescript": "^4.x.x"
   },
   "dependencies": {
-    "koatty": "^3.6.9",
+    "koatty": "^3.7.0",
     "koatty_cacheable": "^1.3.7",
     "koatty_lib": "^1.2.12",
-    "koatty_schedule": "^1.5.6",
-    "koatty_static": "^1.2.9",
-    "koatty_store": "^1.5.5",
-    "koatty_views": "^1.0.7",
+    "koatty_schedule": "^1.5.8",
+    "koatty_static": "^1.2.10",
+    "koatty_store": "^1.5.6",
+    "koatty_validation": "^1.2.5",
+    "koatty_views": "^1.0.8",
     "tslib": "^2.4.0"
   }
 }

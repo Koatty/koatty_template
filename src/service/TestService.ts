@@ -3,7 +3,7 @@
  * @Usage: 处理具体业务逻辑
  * @Author: xxx
  * @Date: 2020-12-22 15:59:51
- * @LastEditTime: 2021-12-02 00:29:55
+ * @LastEditTime: 2022-11-03 17:27:41
  */
 
 import { Service, BaseService, Autowired, Logger } from 'koatty';
@@ -35,17 +35,16 @@ export class TestService extends BaseService {
   // 自动缓存,默认存储在内存,支持存储redis
   @CacheAble("getUser")
   getUser(id: number) {
-    return Promise.resolve({ "id": id, "username": "test" });
+    return { "id": id, "username": "test" };
   }
 
   /**
    * 新增用户
    *
    * @param {UserDto} data
-   * @returns {*}  {Promise<any>}
    * @memberof TestService
    */
-  addUser(data: UserDto): Promise<any> {
+  addUser(data: UserDto) {
     return Promise.resolve();
   }
 

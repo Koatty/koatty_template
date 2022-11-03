@@ -6,7 +6,7 @@
  * @LastEditTime: 2021-12-02 00:31:18
  */
 
-import { Controller, Autowired, GetMapping, Post, PostMapping, KoattyContext, Before, HttpController, Get } from 'koatty';
+import { Controller, Autowired, GetMapping, Post, PostMapping, KoattyContext, Before, BaseController, Get } from 'koatty';
 import { Valid, Validated } from "koatty_validation";
 import { App } from '../App';
 import { TestAspect } from '../aspect/TestAspect';
@@ -14,7 +14,7 @@ import { UserDto } from '../dto/UserDto';
 import { TestService } from '../service/TestService';
 
 @Controller('/')
-export class IndexController extends HttpController {
+export class IndexController extends BaseController {
   app: App;
   ctx: KoattyContext;
 
@@ -29,7 +29,7 @@ export class IndexController extends HttpController {
    */
   async __before(): Promise<any> {
     // 登录检查
-    const token = this.header("x-access-token");
+    const token = this.ctx.get("x-access-token");
     const isLogin = await this.TestService.checkLogin(token);
     if (isLogin) {
       this.ctx.userId = `${Date.now()}_${String(Math.random()).substring(2)}`;
