@@ -3773,10 +3773,10 @@ koa@2.13.4:
     type-is "^1.6.16"
     vary "^1.1.2"
 
-koatty@^3.7.3:
-  version "3.7.3"
-  resolved "https://registry.yarnpkg.com/koatty/-/koatty-3.7.3.tgz#a99f32e8b25d6d56d81bc77ace466ab67e4878be"
-  integrity sha512-VWE8kgbFcP9kZGQbG7kl9P0JkAzIJ5hV9ONAPvaWmMxs9qChWTHddwVe41T9BDV8LJbJgb5DNdMkcZpnRqyFFQ==
+koatty@^3.7.4:
+  version "3.7.4"
+  resolved "https://registry.yarnpkg.com/koatty/-/koatty-3.7.4.tgz#f29dcd4d4d364c1906fd8eb330d11d57ea0360d0"
+  integrity sha512-nZwgIIE/f5tJbjOzdNezUuwtv2AAvfzmAjB27s4RYbO+crXFbE+mXjPKmQIlKSE5F+W3OMlzpu9nhZzdNq8zrg==
   dependencies:
     koa "2.13.4"
     koatty_config "1.1.5"
