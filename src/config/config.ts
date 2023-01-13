@@ -3,7 +3,7 @@
  * @Usage: 静态配置数据信息
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2022-03-15 10:42:04
+ * @LastEditTime: 2023-01-13 16:38:32
  */
 export default {
   /*app config*/
@@ -16,9 +16,7 @@ export default {
   crt_file: "", // HTTPS certificate crt
   encoding: "utf-8", // Character Encoding
 
-  // logs_level: "DEBUG", // Level log is printed to the console, "DEBUG" | "INFO" | "WARN" | "ERROR"
-  logs_console: false, // Whether to console logs
-  logs_write: true, // Whether to store logs
-  logs_write_level: "INFO", // Level log is printed to the file, "DEBUG" | "INFO" | "WARN" | "ERROR"
-  logs_path: process.env.ROOT_PATH + "/logs", // Log file directory
+  logs_level: "info", // Level log is printed to the console, "debug" | "info" | "warning" | "error"
+  logs_path: "./logs", // Log file directory
+  // sens_fields: ["password"] // Sensitive words
 };
