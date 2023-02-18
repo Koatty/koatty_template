@@ -1,9 +1,9 @@
 /*
  * @Description: 路由配置
- * @Usage: 项目统一使用koa-router，这里配置路由属性
+ * @Usage: 项目路由属性配置
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2022-03-15 10:42:28
+ * @LastEditTime: 2023-02-19 01:32:59
  */
 
 export default {

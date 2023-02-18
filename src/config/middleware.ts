@@ -1,9 +1,9 @@
 /*
  * @Description: 中间件配置
- * @usage: 配置待加载的中间件及加载顺序, 中间件在middleware目录下引入
+ * @usage: 配置待加载的中间件及加载顺序
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2022-03-15 10:42:17
+ * @LastEditTime: 2023-02-19 01:32:34
  */
 
 export default {
