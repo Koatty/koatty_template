@@ -3,7 +3,7 @@
  * @Usage: 接收处理路由参数
  * @Author: xxx
  * @Date: 2020-12-22 15:31:17
- * @LastEditTime: 2021-12-02 00:31:18
+ * @LastEditTime: 2023-03-02 18:18:18
  */
 
 import { Controller, Autowired, GetMapping, Post, PostMapping, KoattyContext, Before, BaseController, Get } from 'koatty';
@@ -94,7 +94,7 @@ export class IndexController extends BaseController {
   }
 
   /**
-   * hello 接口
+   * html 渲染
    *
    * @returns
    * @memberof TestController
