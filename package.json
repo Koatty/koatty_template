@@ -1,18 +1,18 @@
 {
-  "name": "_PROJECT_NAME",
+  "name": "ktdemo",
   "version": "1.0.0",
   "description": "application created by koatty",
   "main": "./dist/App.js",
   "scripts": {
     "build": "npm run clear && tsc && copyfiles -u 1 ./src/**/*.json ./src/**/*.proto dist/",
     "clear": "del-cli --force dist",
-    "build:images": "npm run build && docker build -t koatty/_PROJECT_NAME:latest -f deploy/Dockerfile .",
+    "build:images": "npm run build && docker build -t koatty/ktdemo:latest -f deploy/Dockerfile .",
     "eslint": "eslint --ext .ts,.js ./",
     "dev": "nodemon ./src/App.ts",
     "doc": "apidoc -i src/controller/ -o static/doc/",
     "prerelease": "npm test && npm run build",
     "release": "npm run prepublishOnly && standard-version",
-    "start": "npm run build && NODE_ENV=production node ./dist/App.js",
+    "start": "npm run build && cross-env NODE_ENV=production node ./dist/App.js",
     "test": "npm run eslint && npm run build && jest --passWithNoTests --detectOpenHandles"
   },
   "engines": {
@@ -47,6 +47,7 @@
     "@typescript-eslint/parser": "^5.x.x",
     "conventional-changelog-cli": "^2.x.x",
     "copyfiles": "^2.x.x",
+    "cross-env": "^7.x.x",
     "del-cli": "^5.x.x",
     "eslint": "^8.x.x",
     "eslint-plugin-jest": "^27.x.x",
@@ -55,16 +56,17 @@
     "jest-html-reporters": "^3.x.x",
     "nodemon": "^2.x.x",
     "standard-version": "^9.x.x",
+    "supertest": "^6.x.x",
     "ts-jest": "^29.x.x",
     "ts-node": "^10.x.x",
-    "typescript": "^4.x.x"
+    "typescript": "^5.x.x"
   },
   "dependencies": {
-    "koatty": "^3.8.2",
+    "koatty": "^3.9.1",
     "koatty_cacheable": "^1.4.0",
-    "koatty_schedule": "^1.5.10",
-    "koatty_static": "^1.2.12",
-    "koatty_store": "^1.6.0",
-    "koatty_views": "^1.0.8"
+    "koatty_schedule": "^1.5.11",
+    "koatty_static": "^1.2.13",
+    "koatty_store": "^1.6.1",
+    "koatty_views": "^1.0.9"
   }
 }
