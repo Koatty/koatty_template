@@ -1,12 +1,12 @@
 {
-  "name": "ktdemo",
+  "name": "_PROJECT_NAME",
   "version": "1.0.0",
   "description": "application created by koatty",
   "main": "./dist/App.js",
   "scripts": {
     "build": "npm run clear && tsc && copyfiles -u 1 ./src/**/*.json ./src/**/*.proto dist/",
     "clear": "del-cli --force dist",
-    "build:images": "npm run build && docker build -t koatty/ktdemo:latest -f deploy/Dockerfile .",
+    "build:images": "npm run build && docker build -t koatty/_PROJECT_NAME:latest -f deploy/Dockerfile .",
     "eslint": "eslint --ext .ts,.js ./",
     "dev": "nodemon ./src/App.ts",
     "doc": "apidoc -i src/ -o static/doc/",
