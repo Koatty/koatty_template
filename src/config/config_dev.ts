@@ -3,7 +3,7 @@
  * @Usage: 静态配置数据信息
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2023-01-13 16:38:44
+ * @LastEditTime: 2023-08-21 16:07:37
  */
 export default {
   /*app config*/
@@ -11,6 +11,7 @@ export default {
   app_host: "", // Hostname
   protocol: "http", // Server protocol 'http' | 'https' | 'http2' | 'grpc' | 'ws' | 'wss'
   open_trace: false, // Full stack debug & trace, default: false
+  async_hooks: false, // Provides an API to track asynchronous resources, default: false
   http_timeout: 10, // HTTP request timeout time(seconds)
   key_file: "", // HTTPS certificate key
   crt_file: "", // HTTPS certificate crt
