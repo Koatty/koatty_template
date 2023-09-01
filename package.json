@@ -70,6 +70,7 @@
     "koatty_schedule": "^1.5.11",
     "koatty_static": "^1.2.13",
     "koatty_store": "^1.6.1",
+    "koatty_validation": "^1.2.9",
     "koatty_views": "^1.0.9"
   }
 }
