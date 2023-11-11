@@ -1,9 +1,11 @@
-/**
- * @ author: richen
- * @ copyright: Copyright (c) - <richenlin(at)gmail.com>
- * @ license: BSD (3-Clause)
- * @ version: 2020-05-18 11:17:26
+/*
+ * @Description: 静态文件服务中间件
+ * @Usage: 提供静态文件服务
+ * @Author: xxx
+ * @Date: 2020-12-22 15:24:25
+ * @LastEditTime: 2023-11-11 11:40:26
  */
+
 import { Middleware, IMiddleware } from 'koatty';
 import { App } from '../App';
 import { Static } from "koatty_static";

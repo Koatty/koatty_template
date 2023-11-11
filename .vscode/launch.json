@@ -4,7 +4,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Koatty Project Debug",
+      "name": "Koatty Project",
       "args": [
         "${workspaceRoot}/src/App.ts"
       ],
@@ -21,7 +21,7 @@
     },
     {
       "type": "node",
-      "name": "vscode-jest-tests",
+      "name": "Koatty-jest-tests",
       "request": "launch",
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen",
