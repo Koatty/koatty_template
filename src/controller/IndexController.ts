@@ -3,7 +3,7 @@
  * @Usage: 接收处理路由参数
  * @Author: xxx
  * @Date: 2020-12-22 15:31:17
- * @LastEditTime: 2023-11-11 11:22:12
+ * @LastEditTime: 2023-11-14 19:56:53
  */
 
 import {
@@ -22,23 +22,6 @@ export class IndexController extends BaseController {
 
   @Autowired()
   protected TestService: TestService;
-
-  /**
-   * 前置登录检查
-   * AOP前置切面方法，等同于@BeforeEach()
-   * @returns {*}  {Promise<any>}
-   * @memberof TestController
-   */
-  // async __before(): Promise<any> {
-  //   // 登录检查
-  //   const token = this.ctx.get("x-access-token");
-  //   const isLogin = await this.TestService.checkLogin(token);
-  //   if (isLogin) {
-  //     this.ctx.userId = `${Date.now()}_${String(Math.random()).substring(2)}`;
-  //   } else {
-  //     return this.fail('no login', { needLogin: 1 });
-  //   }
-  // }
 
   /**
    * @api {get} / index接口
@@ -70,7 +53,7 @@ export class IndexController extends BaseController {
    * {"code":0,"message":"错误信息","data":null}
    */
   @GetMapping("/get/:id")
-  @Before("AuthAspect")
+  @Before("AuthAspect") // 前置登录检查,AOP前置切面方法
   async get(
     @Header("x-access-token") token: string,
     @Valid("IsNotEmpty", "id不能为空") @PathVariable("id") id: number): Promise<any> {
@@ -92,7 +75,7 @@ export class IndexController extends BaseController {
    */
   @PostMapping('/add')
   @Validated()
-  @Before("AuthAspect")
+  @Before("AuthAspect") // 前置登录检查,AOP前置切面方法
   async add(
     @Header("x-access-token") token: string,
     @Post() data: UserDto): Promise<any> {
