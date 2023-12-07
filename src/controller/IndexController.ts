@@ -3,12 +3,12 @@
  * @Usage: 接收处理路由参数
  * @Author: xxx
  * @Date: 2020-12-22 15:31:17
- * @LastEditTime: 2023-11-14 19:58:14
+ * @LastEditTime: 2023-12-07 09:21:07
  */
 
 import {
   Controller, Autowired, GetMapping, Post, PostMapping, KoattyContext,
-  Before, BaseController, Get, Header, PathVariable
+  Before, BaseController, Header, PathVariable
 } from 'koatty';
 import { Valid, Validated } from "koatty_validation";
 import { App } from '../App';
@@ -41,7 +41,7 @@ export class IndexController extends BaseController {
   }
 
   /**
-   * @api {get} /get?userId= get接口
+   * @api {get} /get/:id get接口
    * @apiGroup Test
    * 
    * @apiParam {number} id  userId.
