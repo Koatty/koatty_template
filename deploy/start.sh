@@ -1,17 +1,16 @@
 #!/bin/bash
 
 echo "install nodejs modules ----------------------------------"
-cd /data && 
 
 if [ -f "/data/pnpm-lock.lock" ]; then
   # used pnpm
-  pnpm install --production
+  cd /data && pnpm install --production
 elif [ -f "/data/yarn.lock" ]; then
   # used yarn  
-  yarn install --production
+  cd /data && yarn install --production
 else
   # used npm
-  npm install --production
+  cd /data && npm install --production
 fi
 
 echo "start pm2 -----------------------------------------------"
