@@ -20,22 +20,23 @@ projectName
 │   ├── controller                # 控制器
 │   │   └── TestController.ts
 │   ├── middleware                # 中间件
-│   │   ├── JwtMiddleware.ts
+│   │   ├── StaticMiddleware.ts
 │   │   └── ViewMiddleware.ts
 │   ├── model                     # 持久层
-│   │   └── TestModel.ts
+│   │   └── UserModel.ts
+│   │   └── UserEntity.ts
 │   ├── plugin                    # 插件
 │   │   └── TestPlugin.ts
 │   ├── proto                     # pb协议
 │   │   └── helloworld.proto
-│   ├── resource                  # 用于存放静态数据或白名单等
+│   ├── resource                  # 用于存放静态数据或白名单等(不可URL访问)
 │   │   └── data.json
 │   ├── service                   # service逻辑层
 │   │   └── TestService.ts
 │   ├── utils                     # 工具函数
 │   │   └── index.ts
 │   └── App.ts                    # 入口文件
-├── static                        # 静态文件目录
+├── static                        # 静态文件目录(可URL访问)
 │   └── index.html
 ├── test                          # 测试用例
 │   └── index.test.js
@@ -76,6 +77,7 @@ if you use vscode , edit the `.vscode/launch.json` , like this:
             "sourceMaps": true,
             "cwd": "${workspaceRoot}",
             "protocol": "inspector",
+            "outputCapture": "std",
             "internalConsoleOptions": "neverOpen"
         }
     ]
