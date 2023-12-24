@@ -3,7 +3,7 @@
  * @Usage: 处理具体业务逻辑
  * @Author: xxx
  * @Date: 2020-12-22 15:59:51
- * @LastEditTime: 2023-12-05 21:31:35
+ * @LastEditTime: 2023-12-24 10:20:26
  */
 
 import { Service, BaseService, Autowired, Logger } from 'koatty';
@@ -54,7 +54,7 @@ export class TestService extends BaseService {
    * @memberof TestService
    */
   @Scheduled("0 * * * * *")
-  //计划任务加锁，默认内存锁，配合redis可以实现分布式锁
+  // 计划任务加锁，默认使用内存锁，配合redis可以实现分布式锁
   // @SchedulerLock("testCron") 
   testCron() {
     Logger.Debug('cron job');

@@ -3,7 +3,7 @@
  * @Usage: 实例化app，创建服务
  * @Author: richen
  * @Date: 2020-12-22 15:35:07
- * @LastEditTime: 2020-12-24 14:50:28
+ * @LastEditTime: 2023-12-24 10:21:22
  */
 
 import { Koatty, Bootstrap } from "koatty";

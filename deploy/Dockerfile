@@ -4,7 +4,7 @@ MAINTAINER richenlin, https://github.com/richenlin
 
 # Upgrade
 RUN echo -e "https://mirror.tuna.tsinghua.edu.cn/alpine/v3.15/main\n\
-https://mirror.tuna.tsinghua.edu.cn/alpine/v3.15/community" > /etc/apk/repositories
+    https://mirror.tuna.tsinghua.edu.cn/alpine/v3.15/community" > /etc/apk/repositories
 
 RUN apk update && apk upgrade
 
@@ -18,11 +18,11 @@ RUN apk add --no-cache bash curl ca-certificates tzdata && \
 
 # Install module
 RUN touch ~/.bashrc && curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --rc && \
-yarn --version
+    yarn --version
 
-RUN npm i -g nrm && \
-	nrm use yarn && npm i -g pm2@2.x.x
-	
+RUN npm i -g nrm pnpm && \
+    nrm use yarn && npm i -g pm2@2.x.x
+
 
 # Clean 
 RUN rm -rf /var/cache/apk/* \
@@ -39,8 +39,10 @@ EXPOSE 3000
 COPY dist/ /data/dist
 COPY static/ /data/static
 COPY view/ /data/view
-COPY package.json /data/package.json
-COPY yarn.lock /data/yarn.lock
+COPY package.json package-lock.lock yarn.* pnpm-lock.* /data/
+# COPY package-lock.lock /data/package-lock.lock
+# COPY yarn.lock /data/yarn.lock
+# COPY pnpm-lock.lock /data/pnpm-lock.lock
 
 COPY deploy/start.sh /start.sh
 COPY deploy/pm2.json /pm2.json
