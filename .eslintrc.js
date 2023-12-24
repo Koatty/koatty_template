@@ -3,7 +3,7 @@
  * @Usage: 
  * @Author: richen
  * @Date: 2022-05-27 11:00:00
- * @LastEditTime: 2023-11-11 11:22:34
+ * @LastEditTime: 2023-12-24 10:19:43
  */
 /**
  * 
@@ -37,6 +37,7 @@ module.exports = {
     "@typescript-eslint/no-empty-function": "off",
     "@typescript-eslint/no-empty-interface": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/ban-types": ["error",
       {
         "types": {
