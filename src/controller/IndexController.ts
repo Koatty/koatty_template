@@ -3,12 +3,12 @@
  * @Usage: 接收处理路由参数
  * @Author: xxx
  * @Date: 2020-12-22 15:31:17
- * @LastEditTime: 2024-01-04 06:53:49
+ * @LastEditTime: 2024-01-04 07:49:48
  */
 
 import {
   Controller, Autowired, GetMapping, Post, PostMapping, KoattyContext,
-  Before, Header, PathVariable, Output, IContainer
+  Before, Header, PathVariable, Output
 } from 'koatty';
 import { Valid, Validated } from "koatty_validation";
 import { App } from '../App';
@@ -16,7 +16,7 @@ import { UserDto } from '../dto/UserDto';
 import { TestService } from '../service/TestService';
 
 @Controller('/')
-export class IndexController implements IContainer {
+export class IndexController {
   app: App;
   ctx: KoattyContext;
 

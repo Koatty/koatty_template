@@ -3,14 +3,14 @@
  * @Usage: 
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2024-01-04 06:14:37
+ * @LastEditTime: 2024-01-04 07:49:56
  */
 
-import { Aspect, Exception, IAspect, Logger } from "koatty";
+import { Aspect, Exception, Logger } from "koatty";
 import { App } from '../App';
 
 @Aspect()
-export class AuthAspect implements IAspect {
+export class AuthAspect {
   app: App;
 
   async run(token: string) {

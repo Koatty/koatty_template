@@ -3,17 +3,17 @@
  * @Usage: 处理具体业务逻辑
  * @Author: xxx
  * @Date: 2020-12-22 15:59:51
- * @LastEditTime: 2024-01-04 06:53:34
+ * @LastEditTime: 2024-01-04 07:50:42
  */
 
-import { Service, Autowired, Logger, IService } from 'koatty';
+import { Service, Autowired, Logger } from 'koatty';
 import { App } from '../App';
 import { UserDto } from '../dto/UserDto';
 import { Scheduled, SchedulerLock } from "koatty_schedule";
 import { CacheAble, CacheEvict, GetCacheStore } from "koatty_cacheable";
 
 @Service()
-export class TestService implements IService {
+export class TestService {
   app: App;
 
   /**

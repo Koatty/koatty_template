@@ -3,15 +3,15 @@
  * @Usage: Test插件实现
  * @Author: xxx
  * @Date: 2020-12-22 16:00:49
- * @LastEditTime: 2022-03-15 10:41:29
+ * @LastEditTime: 2024-01-04 07:50:24
  */
 
-import { Plugin, IPlugin, Logger } from 'koatty';
+import { Plugin, Logger } from 'koatty';
 import { App } from '../App';
 // import { TestPlugin } from 'xxx';
 
 @Plugin()
-export class TestPlugin implements IPlugin {
+export class TestPlugin {
   run(options: any, app: App) {
     // return TestPlugin(options, app);
     // or
