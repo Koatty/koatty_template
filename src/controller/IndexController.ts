@@ -3,7 +3,7 @@
  * @Usage: 接收处理路由参数
  * @Author: xxx
  * @Date: 2020-12-22 15:31:17
- * @LastEditTime: 2024-01-04 06:15:13
+ * @LastEditTime: 2024-01-04 06:53:49
  */
 
 import {
@@ -13,7 +13,7 @@ import {
 import { Valid, Validated } from "koatty_validation";
 import { App } from '../App';
 import { UserDto } from '../dto/UserDto';
-import { ITestService } from '../service/ITestService';
+import { TestService } from '../service/TestService';
 
 @Controller('/')
 export class IndexController implements IContainer {
@@ -21,7 +21,7 @@ export class IndexController implements IContainer {
   ctx: KoattyContext;
 
   @Autowired()
-  protected TestService: ITestService;
+  protected TestService: TestService;
 
   /**
    * constructor
