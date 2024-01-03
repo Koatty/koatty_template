@@ -3,10 +3,10 @@
  * @Usage: 提供静态文件服务
  * @Author: xxx
  * @Date: 2020-12-22 15:24:25
- * @LastEditTime: 2023-12-23 11:33:51
+ * @LastEditTime: 2024-01-04 06:17:59
  */
 
-import { Middleware, IMiddleware } from 'koatty';
+import { IMiddleware, Middleware } from 'koatty';
 import { App } from '../App';
 import { KoattyStatic } from "koatty_static";
 

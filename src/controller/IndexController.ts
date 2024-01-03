@@ -3,25 +3,33 @@
  * @Usage: 接收处理路由参数
  * @Author: xxx
  * @Date: 2020-12-22 15:31:17
- * @LastEditTime: 2023-12-07 09:21:07
+ * @LastEditTime: 2024-01-04 06:15:13
  */
 
 import {
   Controller, Autowired, GetMapping, Post, PostMapping, KoattyContext,
-  Before, BaseController, Header, PathVariable
+  Before, Header, PathVariable, Output, IContainer
 } from 'koatty';
 import { Valid, Validated } from "koatty_validation";
 import { App } from '../App';
 import { UserDto } from '../dto/UserDto';
-import { TestService } from '../service/TestService';
+import { ITestService } from '../service/ITestService';
 
 @Controller('/')
-export class IndexController extends BaseController {
+export class IndexController implements IContainer {
   app: App;
   ctx: KoattyContext;
 
   @Autowired()
-  protected TestService: TestService;
+  protected TestService: ITestService;
+
+  /**
+   * constructor
+   *
+   */
+  constructor(ctx: KoattyContext) {
+    this.ctx = ctx;
+  }
 
   /**
    * @api {get} / index接口
@@ -37,7 +45,7 @@ export class IndexController extends BaseController {
   @GetMapping()
   index(): Promise<any> {
     this.ctx.status = 200;
-    return this.ok('Hi Koatty');
+    return Output.ok(this.ctx, 'Hi Koatty');
   }
 
   /**
@@ -58,7 +66,7 @@ export class IndexController extends BaseController {
     @Header("x-access-token") token: string,
     @Valid("IsNotEmpty", "id不能为空") @PathVariable("id") id: number): Promise<any> {
     const userInfo = await this.TestService.getUser(id);
-    return this.ok("success", userInfo);
+    return Output.ok(this.ctx, "success", userInfo);
   }
 
   /**
@@ -80,7 +88,7 @@ export class IndexController extends BaseController {
     @Header("x-access-token") token: string,
     @Post() data: UserDto): Promise<any> {
     const userInfo = await this.TestService.addUser(data);
-    return this.ok('success', { userInfo });
+    return Output.ok(this.ctx, 'success', { userInfo });
   }
 
   /**
