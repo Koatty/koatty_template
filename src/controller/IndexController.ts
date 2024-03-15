@@ -3,7 +3,7 @@
  * @Usage: 接收处理路由参数
  * @Author: xxx
  * @Date: 2020-12-22 15:31:17
- * @LastEditTime: 2024-02-02 15:43:46
+ * @LastEditTime: 2024-03-15 10:57:00
  */
 
 import {
@@ -43,9 +43,9 @@ export class IndexController {
    * {"code":0,"message":"错误信息","data":null}
    */
   @GetMapping()
-  index(): Promise<any> {
+  index() {
     this.ctx.status = 200;
-    return Output.ok(this.ctx, 'Hi Koatty');
+    return Output.ok('Hi Koatty');
   }
 
   /**
@@ -66,7 +66,7 @@ export class IndexController {
     @Header("x-access-token") token: string,
     @Valid("IsNotEmpty", "id不能为空") @PathVariable("id") id: number): Promise<any> {
     const userInfo = await this.TestService.getUser(id);
-    return Output.ok(this.ctx, "success", userInfo);
+    return Output.ok("success", userInfo);
   }
 
   /**
@@ -88,7 +88,7 @@ export class IndexController {
     @Header("x-access-token") token: string,
     @Post() data: UserDto): Promise<any> {
     const userInfo = await this.TestService.addUser(data);
-    return Output.ok(this.ctx, 'success', { userInfo });
+    return Output.ok('success', { userInfo });
   }
 
   /**
