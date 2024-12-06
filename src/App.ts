@@ -3,10 +3,10 @@
  * @Usage: 实例化app，创建服务
  * @Author: richen
  * @Date: 2020-12-22 15:35:07
- * @LastEditTime: 2023-12-24 10:21:22
+ * @LastEditTime: 2024-12-06 10:33:12
  */
 
-import { Koatty, Bootstrap } from "koatty";
+import { AppEvent, BindEventHook, Bootstrap, Koatty, Logger } from "koatty";
 import * as path from 'path';
 
 // bootstrap function
@@ -20,10 +20,26 @@ import * as path from 'path';
 // @ComponentScan('./')
 // 配置配置文件存放目录，默认: ./config
 // @ConfigurationScan('./config')
+// 应用事件绑定
+@OnAppStopEvent()
 export class App extends Koatty {
   // 重写init方法，用于服务初始化前置
   public init() {
     // 服务运行目录
     this.rootPath = path.dirname(__dirname);
+  }
+}
+
+/**
+ * @description: App stop时触发事件
+ * @return {*}
+ */
+function OnAppStopEvent(): ClassDecorator {
+  return (target: Function) => {
+    BindEventHook(AppEvent.appStop, (app: App) => {
+      // todo
+      Logger.info("on stop event");
+      return Promise.resolve();
+    }, target)
   }
 }

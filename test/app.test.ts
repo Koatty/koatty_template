@@ -1,31 +1,28 @@
-/*
- * @Description: 
- * @Usage: 
- * @Author: richen
- * @Date: 2022-03-10 11:49:05
- * @LastEditTime: 2022-03-10 19:01:59
- */
+import { ExecBootStrap, KoattyApplication } from 'koatty';
 import request from 'supertest';
-import { ExecBootStrap } from 'koatty';
 import { App } from '../src/App';
-
 
 describe('UT example', () => {
 
-  let server: any;
+  let app: KoattyApplication;
   beforeAll(async () => {
     jest.useFakeTimers();
-    const appInstance = await ExecBootStrap()(App);
-    server = await appInstance.listen();
+    // test env
+    process.env.KOATTY_ENV = 'ts-node';
+    app = await ExecBootStrap()(App);
+    // app.use(async (ctx: any) => {
+    //   ctx.body = 'Hello, koatty!';
+    // });
   });
 
   afterAll(done => {
-    server.close();
     done();
+    jest.clearAllMocks();
   });
 
   it('request', async () => {
-    const rsp = await request(server).get('/');
-    expect(rsp.status).toBe(200);
+    const res = await request(app.callback()).get('/');
+    expect(res.status).toBe(200);
+    expect(res.body).toEqual({ "code": 0, "message": "Hi Koatty" });
   });
 });

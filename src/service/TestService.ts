@@ -3,14 +3,14 @@
  * @Usage: 处理具体业务逻辑
  * @Author: xxx
  * @Date: 2020-12-22 15:59:51
- * @LastEditTime: 2024-01-04 07:50:42
+ * @LastEditTime: 2024-12-06 09:47:56
  */
 
-import { Service, Autowired, Logger } from 'koatty';
+import { Logger, Service } from 'koatty';
+import { CacheAble } from "koatty_cacheable";
+import { Scheduled } from "koatty_schedule";
 import { App } from '../App';
 import { UserDto } from '../dto/UserDto';
-import { Scheduled, SchedulerLock } from "koatty_schedule";
-import { CacheAble, CacheEvict, GetCacheStore } from "koatty_cacheable";
 
 @Service()
 export class TestService {
@@ -41,7 +41,7 @@ export class TestService {
   /**
    * 新增用户
    *
-   * @param {UserDto} data
+   * @param {UserDto} _data
    * @memberof TestService
    */
   addUser(data: UserDto) {
@@ -55,7 +55,7 @@ export class TestService {
    */
   @Scheduled("0 * * * * *")
   // 计划任务加锁，默认使用内存锁，配合redis可以实现分布式锁
-  // @SchedulerLock("testCron") 
+  // @RedLock("testCron")
   testCron() {
     Logger.Debug('cron job');
   }
